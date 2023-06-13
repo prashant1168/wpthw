@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/cesiumjs/1.78/Build/Cesium/Cesium.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#b1").click(function(){
+                    $("#t1").html("<thead><tr><td>table</td><td>value</td></tr></thead>")
+                    let n1=parseInt($("#i1").val())
+                    let n2=parseInt($("#i2").val())
+                    for(let i=1;i<=n2;i++){
+                        let prod=n1*i
+                $("#t1").append(`<tr><td>${n1}*${i}</td><td>${prod}</td><tr>`)
+                }
+            })
+        })
+        </script>
+    </head>
+    <body>
+        table of<input type="number" id="i1">
+        to<input type="number" id="i2">
+        <input type="button" id="b1" value="click">
+        <table border="1" id="t1">
+            <thead><tr><td>table</td><td>value</td></tr></thead>
+        </table>
+    </body>
+</html>
